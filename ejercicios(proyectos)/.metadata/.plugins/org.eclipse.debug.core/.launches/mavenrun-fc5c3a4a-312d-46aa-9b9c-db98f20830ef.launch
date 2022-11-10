@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2e.Maven2LaunchConfigurationType">
+    <booleanAttribute key="M2_BATCH" value="false"/>
+    <stringAttribute key="M2_GOALS" value="-U archetype:generate"/>
+    <listAttribute key="M2_PROPERTIES">
+        <listEntry value="archetypeVersion=1.0.0"/>
+        <listEntry value="package=ar.edu.unlp.info.oo1.ejercicio18_LiquidacionDeHaberes"/>
+        <listEntry value="archetypeGroupId=ar.edu.unlp.info.oo1"/>
+        <listEntry value="archetypeArtifactId=objetos-uno"/>
+        <listEntry value="groupId=ar.edu.unlp.info.oo1  "/>
+        <listEntry value="artifactId=ejercicio18-LiquidacionDeHaberes"/>
+        <listEntry value="outputDirectory=C:\Users\gretoide\Desktop\Facultad\Segundo año\SI206 - Orientación a Objetos 1\Ejercicios"/>
+        <listEntry value="version=0.0.1-SNAPSHOT"/>
+    </listAttribute>
+    <booleanAttribute key="M2_SAVE_BEFORE_LAUNCH" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\gretoide\Desktop\Facultad\Segundo año\SI206 - Orientación a Objetos 1\Ejercicios"/>
+</launchConfiguration>
