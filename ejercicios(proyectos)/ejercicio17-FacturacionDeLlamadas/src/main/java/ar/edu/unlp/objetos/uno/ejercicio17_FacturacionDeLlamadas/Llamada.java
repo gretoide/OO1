@@ -16,8 +16,18 @@ public abstract class Llamada {
 		this.comienzo = comienzo;
 	}
 	
-	
-	
+	public int getEmisor() {
+		return emisor;
+	}
+
+	public int getReceptor() {
+		return receptor;
+	}
+
+	public int getDuracion() {
+		return duracion;
+	}
+
 	public LocalDateTime getComienzo() {
 		return comienzo;
 	}
