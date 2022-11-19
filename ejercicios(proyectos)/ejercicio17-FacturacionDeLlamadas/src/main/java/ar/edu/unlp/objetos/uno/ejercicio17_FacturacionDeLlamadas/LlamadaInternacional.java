@@ -7,7 +7,7 @@ public class LlamadaInternacional extends Llamada {
 	private String paisDestino;
 	
 	
-	public LlamadaInternacional(LocalDateTime comienzo, int duracion, int emisor, int receptor,String paisOrigen, String paisDestino) {
+	public LlamadaInternacional(LocalDateTime comienzo, int duracion, String emisor, String receptor,String paisOrigen, String paisDestino) {
 		super(comienzo,duracion,emisor,receptor);
 		this.paisOrigen = paisOrigen;
 		this.paisDestino = paisDestino;

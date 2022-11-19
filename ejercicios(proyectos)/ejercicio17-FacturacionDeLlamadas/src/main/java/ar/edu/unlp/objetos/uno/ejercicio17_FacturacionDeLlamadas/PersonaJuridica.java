@@ -6,7 +6,7 @@ public class PersonaJuridica extends Persona {
 	private int cuit;
 	private String tipo;
 	
-	public PersonaJuridica(String nombre, String direccion, int nroTelefono, int cuit, String tipo) {
+	public PersonaJuridica(String nombre, String direccion, String nroTelefono, int cuit, String tipo) {
 		super(nombre, direccion, nroTelefono);
 		this.cuit = cuit;
 		this.tipo = tipo;

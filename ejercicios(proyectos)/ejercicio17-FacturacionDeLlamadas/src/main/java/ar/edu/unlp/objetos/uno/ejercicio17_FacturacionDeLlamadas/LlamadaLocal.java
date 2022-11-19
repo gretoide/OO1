@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class LlamadaLocal extends Llamada {
 
-	LlamadaLocal(LocalDateTime comienzo, int duracion, int emisor, int receptor){
+	LlamadaLocal(LocalDateTime comienzo, int duracion, String emisor, String receptor){
 		super(comienzo, duracion, emisor, receptor);
 	}
 	

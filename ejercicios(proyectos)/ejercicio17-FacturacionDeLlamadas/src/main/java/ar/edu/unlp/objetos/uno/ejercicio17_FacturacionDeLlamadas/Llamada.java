@@ -3,12 +3,12 @@ package ar.edu.unlp.objetos.uno.ejercicio17_FacturacionDeLlamadas;
 import java.time.LocalDateTime;
 
 public abstract class Llamada {
-	private int emisor;
-	private int receptor; 
+	private String emisor;
+	private String receptor; 
 	private int duracion;
 	private LocalDateTime comienzo;
 	
-	public Llamada(LocalDateTime comienzo, int duracion, int emisor, int receptor) {
+	public Llamada(LocalDateTime comienzo, int duracion, String emisor, String receptor) {
 		super();
 		this.emisor = emisor;
 		this.receptor = receptor;
@@ -16,11 +16,11 @@ public abstract class Llamada {
 		this.comienzo = comienzo;
 	}
 	
-	public int getEmisor() {
+	public String getEmisor() {
 		return emisor;
 	}
 
-	public int getReceptor() {
+	public String getReceptor() {
 		return receptor;
 	}
 

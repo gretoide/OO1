@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class PersonaFisica extends Persona {
 	private int dni;
 
-	public PersonaFisica(String nombre, String direccion, int nroTelefono, int dni) {
+	public PersonaFisica(String nombre, String direccion, String nroTelefono, int dni) {
 		super(nombre, direccion, nroTelefono);
 		this.dni = dni;
 	}

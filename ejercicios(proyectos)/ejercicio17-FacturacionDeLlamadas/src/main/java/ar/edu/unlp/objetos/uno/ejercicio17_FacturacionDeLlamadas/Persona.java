@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public abstract class Persona {
 	private String nombre;
 	private String direccion;
-	private int nroTelefono;
+	private String nroTelefono;
 	private ArrayList<Llamada> llamadas;
 	private ArrayList<Factura> facturas;
 	
-	public Persona(String nombre, String direccion, int nroTelefono) {
+	public Persona(String nombre, String direccion, String nroTelefono) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.nroTelefono = nroTelefono;
@@ -26,7 +26,7 @@ public abstract class Persona {
 		return direccion;
 	}
 
-	public int getNroTelefono() {
+	public String getNroTelefono() {
 		return nroTelefono;
 	}
 
@@ -38,19 +38,19 @@ public abstract class Persona {
 		return facturas;
 	}
 	
-	public LlamadaLocal registrarLlamadaLocal(LocalDateTime comienzo, int duracion, int emisor, int receptor) {
+	public LlamadaLocal registrarLlamadaLocal(LocalDateTime comienzo, int duracion, String emisor, String receptor) {
 		LlamadaLocal llamadaLocal = new LlamadaLocal(comienzo,duracion,emisor,receptor);
 		this.llamadas.add(llamadaLocal);
 		return llamadaLocal;
 	}
 	
-	public LlamadaInterUrbana registrarLlamadaInterUrbana(LocalDateTime comienzo, int duracion, int emisor, int receptor, int distancia) {
+	public LlamadaInterUrbana registrarLlamadaInterUrbana(LocalDateTime comienzo, int duracion, String emisor, String receptor, int distancia) {
 		LlamadaInterUrbana llamadaInterUrbana = new LlamadaInterUrbana(comienzo,duracion,emisor,receptor,distancia);
 		this.llamadas.add(llamadaInterUrbana);
 		return llamadaInterUrbana;
 	}
 	
-	public LlamadaInternacional registrarLlamadaInternacional(LocalDateTime comienzo, int duracion, int emisor, int receptor, String paisOrigen, String paisDestino) {
+	public LlamadaInternacional registrarLlamadaInternacional(LocalDateTime comienzo, int duracion, String emisor, String receptor, String paisOrigen, String paisDestino) {
 		LlamadaInternacional llamadaInternacional = new LlamadaInternacional(comienzo,duracion,emisor,receptor,paisOrigen,paisDestino);
 		this.llamadas.add(llamadaInternacional);
 		return llamadaInternacional;

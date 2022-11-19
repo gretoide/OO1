@@ -6,7 +6,7 @@ public class LlamadaInterUrbana extends Llamada{
 	
 	private int distancia;
 	
-	public LlamadaInterUrbana(LocalDateTime comienzo ,int duracion, int emisor, int receptor, int distancia) {
+	public LlamadaInterUrbana(LocalDateTime comienzo ,int duracion, String emisor, String receptor, int distancia) {
 		super(comienzo,duracion,emisor,receptor);
 		this.distancia = distancia;
 	}
