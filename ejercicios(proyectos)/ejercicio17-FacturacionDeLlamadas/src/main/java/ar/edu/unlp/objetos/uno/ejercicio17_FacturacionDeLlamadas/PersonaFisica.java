@@ -14,8 +14,9 @@ public class PersonaFisica extends Persona {
 		return dni;
 	}
 	
-	public double calcularMonto(LocalDateTime comienzo, LocalDateTime fin) {
-		double monto = this.calcularMontoTotal(comienzo, fin);
+	@Override
+	public double calcularMontoTotal(LocalDateTime comienzo, LocalDateTime fin) {
+		double monto = super.calcularMontoTotal(comienzo, fin);
 		return monto - (monto*0.1);
 	}
 	

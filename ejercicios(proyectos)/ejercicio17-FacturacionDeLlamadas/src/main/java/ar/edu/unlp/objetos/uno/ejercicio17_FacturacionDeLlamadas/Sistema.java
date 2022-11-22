@@ -12,6 +12,14 @@ public class Sistema {
 		personas= new ArrayList<>();
 	}
 	
+	public ArrayList<String> getNumeros() {
+		return numeros;
+	}
+
+	public ArrayList<Persona> getPersonas() {
+		return personas;
+	}
+
 	public void AgregarNumeroDisponible(String unNumero){
 		this.numeros.add(unNumero);
 	}
