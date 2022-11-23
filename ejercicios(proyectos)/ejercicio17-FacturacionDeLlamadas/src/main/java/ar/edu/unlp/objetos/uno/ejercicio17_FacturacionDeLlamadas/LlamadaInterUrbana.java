@@ -16,7 +16,7 @@ public class LlamadaInterUrbana extends Llamada{
 			return this.calcularCosto(2)+5;
 		}
 		else
-			if(this.getDistancia()<= 500) {
+			if(this.getDistancia()< 500) {
 				return this.calcularCosto(2.5)+5;
 			}
 			else

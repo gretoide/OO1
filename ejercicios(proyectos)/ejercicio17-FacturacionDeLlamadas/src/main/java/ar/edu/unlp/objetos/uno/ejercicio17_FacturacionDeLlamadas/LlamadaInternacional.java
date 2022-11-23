@@ -21,7 +21,8 @@ public class LlamadaInternacional extends Llamada {
 	
 	/*si la llamada es diurna (entre las 8am y las 20pm) retorna 4, sino, retorna 3*/
 	public double calcularCosto() {
-		if((this.getComienzo().getHour() >= 8 && this.getComienzo().getMinute() >= 0)&&(this.getComienzo().getHour() <= 20)) {
+		if((this.getComienzo().getHour() >= 8 && this.getComienzo().getMinute() >= 0)&&
+				((this.getComienzo().getHour() <= 20)&&this.getComienzo().getMinute() <= 0)) {
 			return this.calcularCosto(4);
 		}
 		else {

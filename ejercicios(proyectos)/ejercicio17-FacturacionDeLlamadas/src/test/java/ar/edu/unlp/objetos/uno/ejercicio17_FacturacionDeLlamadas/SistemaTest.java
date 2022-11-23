@@ -44,7 +44,7 @@ public class SistemaTest {
 	}
 	
 	@Test
-	public void registrarLlamadas() {
+	public void registrarLlamadasTest() {
 		/*registramos que las llamadas se registren adecuadamente*/
 		
 		/*registro de llamadas a persona juridica*/
@@ -65,7 +65,7 @@ public class SistemaTest {
 	}
 	
 	@Test 
-	public void facturarLlamadas() {
+	public void facturarLlamadasTest() {
 		/*registro de llamadas a persona juridica*/
 		sistema.registrarLlamadaLocal(LocalDateTime.of(2022, 10, 10, 10, 00), 10, personaConLlamadas.getNroTelefono(), personaSinLlamadas.getNroTelefono()); /*vale 10*/
 		sistema.registrarLlamadaInterUrbana(LocalDateTime.of(2022, 10, 10, 10, 00), 10, personaConLlamadas.getNroTelefono(), personaSinLlamadas.getNroTelefono(), 45); /*vale 25*/
