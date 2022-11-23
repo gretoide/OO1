@@ -24,7 +24,7 @@ public class Sistema {
 		this.numeros.add(unNumero);
 	}
 	
-	public String asignarNumero() {
+	protected String asignarNumero() {
 		String numero = numeros.get(0);
 		numeros.remove(numero);
 		return numero;
@@ -34,14 +34,14 @@ public class Sistema {
 		return this.personas.stream().filter(p -> p.getNroTelefono().equals(numero)).findFirst().orElse(null);
 		}
 	
-	public PersonaFisica darDeAltaPersonaFisica(String unNombre, String unaDireccion,String  unNumTelefono,int dni) {
-		PersonaFisica personaFisica = new PersonaFisica(unNombre,unaDireccion,unNumTelefono,dni);
+	public PersonaFisica darDeAltaPersonaFisica(String unNombre, String unaDireccion,int dni) {
+		PersonaFisica personaFisica = new PersonaFisica(unNombre,unaDireccion,this.asignarNumero(),dni);
 		this.personas.add(personaFisica);
 		return personaFisica;
 	}
 	
-	public PersonaJuridica darDeAltaPersonaJurica(String unNombre, String unaDireccion,String  unNumTelefono, int unCuit, String unTipo) {
-		PersonaJuridica personaJuridica = new PersonaJuridica(unNombre,unaDireccion,unNumTelefono,unCuit,unTipo);
+	public PersonaJuridica darDeAltaPersonaJurica(String unNombre, String unaDireccion, int unCuit, String unTipo) {
+		PersonaJuridica personaJuridica = new PersonaJuridica(unNombre,unaDireccion,this.asignarNumero(),unCuit,unTipo);
 		this.personas.add(personaJuridica);
 		return personaJuridica;
 	}

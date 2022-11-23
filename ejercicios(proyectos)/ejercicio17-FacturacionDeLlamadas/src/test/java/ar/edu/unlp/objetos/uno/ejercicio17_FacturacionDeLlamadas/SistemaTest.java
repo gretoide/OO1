@@ -26,12 +26,12 @@ public class SistemaTest {
 		/*registramos personas en nuestro sistema*/
 		
 		/*personas juridicas*/
-		personaConLlamadas = sistema.darDeAltaPersonaJurica("greta","tolosa", sistema.asignarNumero(), 1, "1"); /*num = 123*/
-		personaSinLlamadas = sistema.darDeAltaPersonaJurica("adrian", "beriso", sistema.asignarNumero(), 1, "1"); /*num = 456*/
+		personaConLlamadas = sistema.darDeAltaPersonaJurica("greta","tolosa", 1, "1"); /*num = 123*/
+		personaSinLlamadas = sistema.darDeAltaPersonaJurica("adrian", "berisso", 1, "1"); /*num = 456*/
 	
 		/*personas fisicas*/
-		personaConLlamadas2 = sistema.darDeAltaPersonaFisica("clemente", "tandil", sistema.asignarNumero(), 123); /*num = 789*/
-		personaSinLlamadas2 = sistema.darDeAltaPersonaFisica("emanuel", "florencio varela", sistema.asignarNumero(), 123); /*num = 101*/
+		personaConLlamadas2 = sistema.darDeAltaPersonaFisica("clemente", "tandil", 123); /*num = 789*/
+		personaSinLlamadas2 = sistema.darDeAltaPersonaFisica("emanuel", "florencio varela", 123); /*num = 101*/
 	}
 	
 	@Test
@@ -39,7 +39,6 @@ public class SistemaTest {
 		/*testeamos un sistema sin registros y uno con*/
 		assertEquals(0,sistemaSinRegistros.getPersonas().size());
 		assertEquals(0,sistemaSinRegistros.getNumeros().size());
-		assertEquals(4,sistema.getPersonas().size());
 		assertEquals(4,sistema.getPersonas().size());
 	}
 	

@@ -63,7 +63,7 @@ public abstract class Persona {
 	}
 	
 	/*deberia ser protegido?*/
-	public double calcularMontoTotal(LocalDateTime comienzo, LocalDateTime fin) {
+	protected double calcularMontoTotal(LocalDateTime comienzo, LocalDateTime fin) {
 		return this.llamadas.stream().filter(l -> l.lapso(comienzo, fin)).mapToDouble(l -> l.calcularCosto()).sum();
 	}
 	
