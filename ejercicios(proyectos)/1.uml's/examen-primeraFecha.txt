@@ -1,0 +1,60 @@
+interface "Bien" <<interface>>{
++calcularImpuesto():Real
+}
+
+class Inmueble {
+-numeroPartida: String
+valorLote, valorEdificacion: Real
++calcularImpuesto():Real
+}
+
+class Contribuyente{
+-nombre, email, localidad: String
++registrarInmueble(num:String, valorLote:Real, valorEdificacion:Real):Inmueble
++registrarAutomotor(patente, marca, modelo:String, fechaFabricacion:Date, valor:Real):Automotor
++registrarEmbarcacion(patente, nombre:String, fechaFabricacion:Date, valor:Real):Embarcacion
++calcularImpuesto():Real
+}
+
+abstract Class "Vehiculo" <<abstract>>{
+-patente: String
+-fabricación: Date
+-valor:Real
+*porcentaje(n:Integer):Real
+}
+
+Class Automotor{
+-marca:  String
+-modelo: String
++calcularImpuesto():Real
+}
+
+Class Embarcacion{
+nombre: String
++calcularImpuesto():Real
+}
+
+Class Sistema{
++darDeAltaContribuyente(nombre: String, dirección: String, email String, localidad String):Contribuyente
++darDeAltaInmueble(nombre String, valorLote: Real, valorEdificacion: real, propietario: Contribuyente):Inmueble
++darAltaAutomotor(patente, marca, modelo:String, fechaFabricacion:Date, valor:Real, propietario:Contribuyente):Automotor
++darAltaEmbarcacion(patente, nombre:String, fechaFabricacion:Date, valor:Real, propietario:Contribuyente):Embarcacion
++calcularImpuesto(contribuyente:Contribuyente):Real
++masPagaPorLocalidad(Localidad:String, n:Integer):Real
+}
+
+Sistema --> "0..*" Contribuyente: contribuyentes
+Contribuyente --> "0..*" Bien: bienes
+
+Inmueble .up.|> Bien
+Vehiculo .up.|> Bien
+
+Automotor -up-|> Vehiculo
+Embarcacion -up-|> Vehiculo
+
+
+
+
+
+
+
