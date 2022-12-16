@@ -2,6 +2,7 @@ package ar.edu.unlp.info.oo1.ejercicio18_LiquidacionDeHaberes;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class Empleado {
 	private String nombre, apellido, cuil;
@@ -55,7 +56,7 @@ public class Empleado {
 	}
 	
 	public void altaContratoHora(LocalDate fechaInicio, LocalDate fechaFin, int horas, double valorHora) {
-		ContratoHora contrato = new ContratoHora(fechaInicio, fechaFin, horas, valorHora);
+		ContratoHora contrato = new ContratoHora(fechaInicio, fechaFin, valorHora, horas);
 		this.contratos.add(contrato);
 	}
 	
@@ -73,6 +74,7 @@ public class Empleado {
 		else if(this.getAntiguedad() >= 20) {
 			return 1;
 		}
+		return 0;
 	}
 	
 	public int getAntiguedad() {
@@ -80,12 +82,12 @@ public class Empleado {
 	}
 	
 	public double calcularMontoTotal() {
-		Contrato contrato = this.buscarContratoVigente();
-		return contrato.calcularMonto() + contrato.calcularMonto() * contrato.calcularAumento();
+		Optional<Contrato> contrato = this.buscarContratoVigente();
+		return contrato.calcularMonto() + contrato.calcularMonto() * this.calcularAumento();
 	}
 	
-	public Contrato buscarContratoVigente() {
-		return contratos.stream().max((c1 -> c2) c1.getFechaInicio().compareTo(c2.getFechaInicio()));
+	public Optional<Contrato> buscarContratoVigente() {
+		return contratos.stream().max((c1, c2) -> c1.getFechaInicio().compareTo(c2.getFechaInicio()));
 	}
 	
 	public boolean tieneContratoVencido() {

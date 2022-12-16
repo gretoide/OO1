@@ -1,5 +1,34 @@
 package ar.edu.unlp.info.oo1.ejercicio18_LiquidacionDeHaberes;
 
-public class ContratoPlanta extends Contrato {
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
+public class ContratoPlanta extends Contrato {
+	private double  sueldo;
+	private double conyuge;
+	private double hijo;
+	
+	public ContratoPlanta(LocalDate fechaInicio, double sueldo, double conyuge, double hijo) {
+		super(fechaInicio);
+		this.sueldo = sueldo;
+		this.conyuge = conyuge;
+		this.hijo = hijo;
+	}
+
+	@Override
+	double calcularMonto() {
+		
+		return this.conyuge+this.hijo+this.sueldo;
+	}
+
+	@Override
+	boolean estaVencido() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	int calcularAños() {
+		return (int) this.getFechaInicio().until(LocalDate.now(), ChronoUnit.YEARS);
+	}
 }
