@@ -82,8 +82,10 @@ public class Empleado {
 	}
 	
 	public double calcularMontoTotal() {
-		Optional<Contrato> contrato = this.buscarContratoVigente();
-		return contrato.calcularMonto() + contrato.calcularMonto() * this.calcularAumento();
+		if(!this.tieneContratoVencido()) {
+			return this.buscarContratoVigente().map(c -> c.calcularMonto() + c.calcularMonto() * this.calcularAumento()).orElse(0d);
+		}
+		return 0;
 	}
 	
 	public Optional<Contrato> buscarContratoVigente() {
@@ -91,7 +93,7 @@ public class Empleado {
 	}
 	
 	public boolean tieneContratoVencido() {
-		return this.buscarContratoVigente().estaVencido();
+		return this.buscarContratoVigente().map(c -> c.estaVencido()).orElse(true);
 	}
 	
 	public Recibo generarRecibo() {
