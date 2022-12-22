@@ -28,7 +28,7 @@ public class TestGeneral {
 	
     @Test
     public void testServicio() {
-        assertEquals((400 +((400/100)*15)), sistema.montoAAbonarCliente(c1));
+        assertEquals((400 +((400/100)*15)), sistema.montoAAbonarCliente(c1)); /*mismo problema que el anterior, no se si lo multipliqué en vez de sumarlo*/
         assertEquals(400, sistema.montoAAbonarCliente(c2));
     }
 }
