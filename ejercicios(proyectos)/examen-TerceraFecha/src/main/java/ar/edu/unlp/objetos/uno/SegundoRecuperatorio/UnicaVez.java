@@ -14,7 +14,7 @@ public class UnicaVez extends Contratacion {
 		DayOfWeek dia = DayOfWeek.from(getFechaInicial());
 		if(dia.equals(DayOfWeek.SATURDAY) || dia.equals(DayOfWeek.SUNDAY)) {
 			return this.getServicio().calcularMonto() + ((this.getServicio().calcularMonto()/100)*15);
-			/*en el parcial puse this.servicio*/
+			/*en el parcial puse this.servicio y no estoy segura si lo multipliqué en vez de sumarlo :s*/
 		}
 		else {
 			return this.getServicio().calcularMonto();
