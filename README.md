@@ -1,6 +1,6 @@
 # SI206 Orientacion a Objetos 1
 
-## Ejercicios :fire:
+## Ejercicios
 * [1 - Wallspot](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio1-wallpost)
 * [2 - Balanza Electronica](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio2-balanzaElectronica)
 * [3 - Presupuestos](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio3-presupuestos)
@@ -18,3 +18,6 @@
 * [16 - Politica de Devolución](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio16-PoliticaDeDevolucion)
 * [17 - Facturación de Llamadas](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio17-FacturacionDeLlamadas)
 * [18 - Liquidación de Haberes](https://github.com/gretoide/SI206-Orientacion-a-Objetos-1/tree/master/ejercicios(proyectos)/ejercicio18-LiquidacionDeHaberes)
+
+ ### [![UNLP](https://img.shields.io/badge/UNLP-Universidad%20Nacional%20de%20La%20Plata-blue)](https://www.unlp.edu.ar/)
+ 
